@@ -1,0 +1,38 @@
+<div class="utility-bar">
+  <span>Learning for every community</span>
+  <span>Admissions and enquiries: 040 4460 0600</span>
+</div>
+
+<header class="site-header">
+  <a routerLink="/" class="brand">
+    <span class="brand-mark">AS</span>
+    <span class="brand-copy"><strong>aashramshalakhamgaon</strong><small>School Education Portal</small></span>
+  </a>
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/about-us" routerLinkActive="active">About us</a>
+    <a routerLink="/schools" routerLinkActive="active">Schools</a>
+    <a routerLink="/teachers" routerLinkActive="active">Teachers</a>
+  </nav>
+  <a routerLink="/schools" class="header-cta">Explore schools <span aria-hidden="true">↗</span></a>
+</header>
+
+<main class="container">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-brand">aashramshalakhamgaon</p>
+      <p>Helping families find the right place to learn, grow and belong.</p>
+    </div>
+    <div class="footer-links">
+      <a routerLink="/about-us">About us</a>
+      <a routerLink="/schools">Schools</a>
+      <a routerLink="/teachers">Teachers</a>
+      <a routerLink="/">Home</a>
+    </div>
+  </div>
+  <p class="footer-note">Sample data for demonstration purposes only.</p>
+</footer>
