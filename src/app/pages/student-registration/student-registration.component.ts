@@ -20,7 +20,7 @@ import { SchoolService } from '../../services/school.service';
       </div>
       <div class="registration-callout">
         <span>Need help?</span>
-        <strong>Call 040 4460 0600</strong>
+        <strong>Call 9503485361</strong>
         <p>Monday to Friday, 9:00 AM - 5:00 PM</p>
       </div>
     </section>
