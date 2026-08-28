@@ -24,6 +24,14 @@ export const routes: Routes = [
     title: 'School details',
   },
   {
+    path: 'student-registration',
+    loadComponent: () =>
+      import('./pages/student-registration/student-registration.component').then(
+        (m) => m.StudentRegistrationComponent,
+      ),
+    title: 'Student Registration',
+  },
+  {
     path: 'teachers',
     loadComponent: () =>
       import('./pages/teacher-list/teacher-list.component').then((m) => m.TeacherListComponent),

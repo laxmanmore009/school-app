@@ -29,3 +29,20 @@ export interface Teacher {
   schoolId: number;
   classTeacherOf?: string;
 }
+
+export interface StudentRegistrationRequest {
+  studentName: string;
+  dateOfBirth: string;
+  grade: string;
+  schoolId: number;
+  guardianName: string;
+  guardianPhone: string;
+  guardianEmail: string;
+  address: string;
+  notes?: string;
+}
+
+export interface StudentRegistration extends StudentRegistrationRequest {
+  id: number;
+  submittedAt: string;
+}

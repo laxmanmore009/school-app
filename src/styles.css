@@ -711,3 +711,183 @@ h3 {
   background: #f1f5f9;
   font-size: 0.85rem;
 }
+
+/* Student registration */
+.registration-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 2rem;
+  align-items: stretch;
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.registration-hero h1 {
+  max-width: 760px;
+  color: var(--accent-dark);
+}
+
+.registration-hero p:not(.eyebrow),
+.success-panel p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.registration-callout,
+.success-panel,
+.form-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.registration-callout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 1.5rem;
+  border-left: 5px solid var(--accent);
+}
+
+.registration-callout span {
+  color: var(--muted);
+  font: 700 0.72rem Arial, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.registration-callout strong {
+  color: var(--accent-dark);
+  font-size: 1.45rem;
+}
+
+.registration-callout p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.success-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-left: 5px solid var(--primary-tone);
+}
+
+.success-panel h2 {
+  margin-top: 0.4rem;
+  color: var(--primary-tone);
+}
+
+.confirmation-number {
+  margin: -0.5rem 0 0.5rem;
+  color: var(--primary-tone);
+  font: 700 0.8rem Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.registration-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-panel {
+  padding: 1.5rem;
+}
+
+.form-section-heading h2 {
+  margin-top: 0.35rem;
+  color: var(--accent-dark);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.registration-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+  border-color: var(--accent);
+  outline: 3px solid rgba(158, 47, 43, 0.14);
+}
+
+.field-error {
+  color: var(--accent);
+  font: 700 0.78rem Arial, sans-serif;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.primary-button,
+.secondary-button {
+  cursor: pointer;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.2rem;
+  font: 700 0.76rem Arial, sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.primary-button {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+.secondary-button {
+  background: #fff;
+  color: var(--accent);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 680px) {
+  .registration-hero,
+  .form-grid,
+  .success-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .success-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

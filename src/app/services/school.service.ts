@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { School, SchoolLevel, Teacher } from '../models/school.model';
+import {
+  School,
+  SchoolLevel,
+  StudentRegistration,
+  StudentRegistrationRequest,
+  Teacher,
+} from '../models/school.model';
 
 @Injectable({ providedIn: 'root' })
 export class SchoolService {
@@ -73,6 +79,8 @@ export class SchoolService {
         'Offers Science, Commerce and Humanities streams in senior grades with career counselling support.',
     },
   ];
+
+  private readonly studentRegistrations: StudentRegistration[] = [];
 
   private readonly teachers: Teacher[] = [
     {
@@ -215,6 +223,21 @@ export class SchoolService {
 
   getSubjects(): string[] {
     return [...new Set(this.teachers.map((t) => t.subject))].sort();
+  }
+
+  registerStudent(request: StudentRegistrationRequest): StudentRegistration {
+    const registration: StudentRegistration = {
+      ...request,
+      id: this.studentRegistrations.length + 1,
+      submittedAt: new Date().toISOString(),
+    };
+
+    this.studentRegistrations.push(registration);
+    return registration;
+  }
+
+  getStudentRegistrations(): StudentRegistration[] {
+    return [...this.studentRegistrations];
   }
 
   getStats() {
